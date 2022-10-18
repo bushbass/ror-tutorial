@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Frozen items</h1>
+
+<div id="frozen_items">
+  <% @frozen_items.each do |frozen_item| %>
+    <%= render frozen_item %>
+    <p>
+      <%= link_to "Show this frozen item", frozen_item %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New frozen item", new_frozen_item_path %>

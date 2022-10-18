@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @frozen_item %>
+
+<div>
+  <%= link_to "Edit this frozen item", edit_frozen_item_path(@frozen_item) %> |
+  <%= link_to "Back to frozen items", frozen_items_path %>
+
+  <%= button_to "Destroy this frozen item", @frozen_item, method: :delete %>
+</div>

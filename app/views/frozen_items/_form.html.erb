@@ -1,0 +1,27 @@
+<%= form_with(model: frozen_item) do |form| %>
+  <% if frozen_item.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(frozen_item.errors.count, "error") %> prohibited this frozen_item from being saved:</h2>
+
+      <ul>
+        <% frozen_item.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :frozen_item, style: "display: block" %>
+    <%= form.text_field :frozen_item %>
+  </div>
+
+  <div>
+    <%= form.label :date_on_package, style: "display: block" %>
+    <%= form.date_field :date_on_package %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

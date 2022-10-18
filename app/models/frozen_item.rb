@@ -1,0 +1,2 @@
+class FrozenItem < ApplicationRecord
+end
