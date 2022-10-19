@@ -1,12 +1,11 @@
 <div id="<%= dom_id frozen_item %>">
-  <p>
+  <div class="card-title">
     <strong>Frozen item:</strong>
     <%= frozen_item.frozen_item %>
-  </p>
+  </div>
 
-  <p>
+  <div class="card-text">
     <strong>Date on package:</strong>
-    <%= frozen_item.date_on_package %>
-  </p>
-
+    <div%= frozen_item.date_on_package %>
+  </div>
 </div>

@@ -2,13 +2,20 @@
 
 <h1>Frozen items</h1>
 
-<div id="frozen_items">
+<div id="frozen_items" >
   <% @frozen_items.each do |frozen_item| %>
-    <%= render frozen_item %>
-    <p>
-      <%= link_to "Show this frozen item", frozen_item %>
-    </p>
+
+    <div class="card me-3 mb-3" style="width: 18rem;">
+      <div class='card-body'>
+        <%= render frozen_item %>
+      
+        <p>
+          <%= link_to "Show this frozen item", frozen_item %>
+        </p>
+      
+      </div>
+    </div>  
   <% end %>
 </div>
 
-<%= link_to "New frozen item", new_frozen_item_path %>
+<%= link_to "New frozen item", new_frozen_item_path, class:'btn btn-primary' %>

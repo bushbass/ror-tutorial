@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+
+.home-page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 70vh;
+}
+.home-page-yield {
+  flex-grow: 1;
+}
+
+#frozen_items {
+  display: flex;
+  flex-wrap: wrap;
+}
