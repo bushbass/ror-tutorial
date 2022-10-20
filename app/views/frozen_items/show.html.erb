@@ -4,11 +4,12 @@
   <div>
 <%= render @frozen_item %>
     <div class="card-title">
-      <%= link_to "Edit this frozen item", edit_frozen_item_path(@frozen_item)
+      <%= link_to "Edit this frozen item", edit_frozen_item_path(@frozen_item), class:'btn btn-warning'
       %>
     </div>
     <div class="card-text">
-    <%= link_to "Back to frozen items", frozen_items_path %> <%= button_to "Destroy this frozen item", @frozen_item, method: :delete, class:'btn btn-danger mt-2' %>
+    <%= link_to "Back to frozen items", frozen_items_path, class:'btn btn-primary' %> 
+    <%= button_to "Destroy this frozen item", @frozen_item, method: :delete, class:'btn btn-danger mt-2' %>
     </div>
   </div>
 </div>
