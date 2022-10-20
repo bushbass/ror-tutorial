@@ -10,7 +10,7 @@
         <%= render frozen_item %>
       
         <p>
-          <%= link_to "Show this frozen item", frozen_item %>
+          <%= link_to "Show this frozen item", frozen_item, class:'btn btn-primary mt-3' %>
         </p>
       
       </div>
@@ -18,4 +18,4 @@
   <% end %>
 </div>
 
-<%= link_to "New frozen item", new_frozen_item_path, class:'btn btn-primary' %>
+<%= link_to "New frozen item", new_frozen_item_path, class:'btn btn-secondary' %>

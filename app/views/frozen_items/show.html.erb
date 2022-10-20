@@ -1,10 +1,14 @@
 <p style="color: green"><%= notice %></p>
 
+<div class="card p-3" style="width: 18rem">
+  <div>
 <%= render @frozen_item %>
-
-<div>
-  <%= link_to "Edit this frozen item", edit_frozen_item_path(@frozen_item) %> |
-  <%= link_to "Back to frozen items", frozen_items_path %>
-
-  <%= button_to "Destroy this frozen item", @frozen_item, method: :delete %>
+    <div class="card-title">
+      <%= link_to "Edit this frozen item", edit_frozen_item_path(@frozen_item)
+      %>
+    </div>
+    <div class="card-text">
+    <%= link_to "Back to frozen items", frozen_items_path %> <%= button_to "Destroy this frozen item", @frozen_item, method: :delete, class:'btn btn-danger mt-2' %>
+    </div>
+  </div>
 </div>
