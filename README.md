@@ -22,3 +22,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+in gitpod, add this line to config/environments/development to be able to view app in a browser
+config.hosts << "3000-bushbass-rortutorial-igrot2mqk17.ws-us72.gitpod.io"
