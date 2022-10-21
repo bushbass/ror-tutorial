@@ -1,4 +1,4 @@
-<%= form_with(model: frozen_item) do |form| %>
+<%= form_with(model: frozen_item) do |form|  %>
   <% if frozen_item.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(frozen_item.errors.count, "error") %> prohibited this frozen_item from being saved:</h2>
@@ -11,17 +11,17 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :frozen_item, style: "display: block" %>
-    <%= form.text_field :frozen_item %>
-  </div>
-
-  <div>
-    <%= form.label :date_on_package, style: "display: block" %>
-    <%= form.date_field :date_on_package %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+  <div class="card p-3" style="width: 18rem;">
+    <div class="form-group">
+      <%= form.label :frozen_item, style: "display: block" %>
+      <%= form.text_field :frozen_item, class:'form-control'  %>
+    </div>
+    <div class="form-group">
+      <%= form.label :date_on_package, style: "display: block" %>
+      <%= form.date_field :date_on_package, class:'form-control' %>
+    </div>
+    <div>
+      <%= form.submit class:'btn btn-warning mt-3' %>
+    </div>
   </div>
 <% end %>
