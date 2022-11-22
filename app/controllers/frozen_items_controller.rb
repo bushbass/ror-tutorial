@@ -65,6 +65,6 @@ class FrozenItemsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def frozen_item_params
-      params.require(:frozen_item).permit(:frozen_item, :date_on_package)
+      params.require(:frozen_item).permit(:frozen_item, :date_on_package, :user_id)
     end
 end

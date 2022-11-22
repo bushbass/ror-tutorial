@@ -10,12 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_14_071202) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_22_031617) do
   create_table "frozen_items", force: :cascade do |t|
     t.string "frozen_item"
     t.date "date_on_package"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_frozen_items_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

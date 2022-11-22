@@ -44,7 +44,11 @@
             <%= link_to "Sign In", new_user_session_path, class: "nav-link" %>
           </li>
           <% end %>
+          
         </ul>
+        <% if current_user %>
+            <span class="nav-link me-5">Current user: <%= current_user.email%></span>
+          <% end %>
       </div>
     </div>
   </nav>

@@ -70,4 +70,6 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
+  config.hosts << "3000-bushbass-rortutorial-5ly8ch14cah.ws-us77.gitpod.io"
+
 end

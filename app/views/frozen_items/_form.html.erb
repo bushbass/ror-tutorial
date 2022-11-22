@@ -15,6 +15,10 @@
     <%= form.label :frozen_item, style: "display: block" %>
     <%= form.text_field :frozen_item %>
   </div>
+  <div>
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.number_field :user_id , id: :friend_user_id ,value: current_user.id, type: :hidden %>
+    </div>
 
   <div>
     <%= form.label :date_on_package, style: "display: block" %>
