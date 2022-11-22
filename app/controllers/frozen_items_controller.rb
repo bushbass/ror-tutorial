@@ -1,5 +1,6 @@
 class FrozenItemsController < ApplicationController
   before_action :set_frozen_item, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!, except: [:index, :show]
 
   # GET /frozen_items or /frozen_items.json
   def index

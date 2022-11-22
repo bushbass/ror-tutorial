@@ -1,4 +1,4 @@
-https://youtu.be/fmyvWz5TUWg?t=9942
+https://youtu.be/fmyvWz5TUWg?t=10314
 
 For anyone having trouble with the Sign up process on Rails 7, go to config/initializers/devise.rb and add this line
 
