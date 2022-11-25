@@ -1,6 +1,8 @@
 class FrozenItemsController < ApplicationController
   before_action :set_frozen_item, only: %i[ show edit update destroy ]
   before_action :authenticate_user!, except: [:index, :show]
+  before_action :correct_user, only: [:edit,:update, :destroy]
+
 
   # GET /frozen_items or /frozen_items.json
   def index
@@ -13,7 +15,8 @@ class FrozenItemsController < ApplicationController
 
   # GET /frozen_items/new
   def new
-    @frozen_item = FrozenItem.new
+    #@frozen_item = FrozenItem.new
+    @frozen_item = current_user.frozen_items.build
   end
 
   # GET /frozen_items/1/edit
@@ -22,7 +25,9 @@ class FrozenItemsController < ApplicationController
 
   # POST /frozen_items or /frozen_items.json
   def create
-    @frozen_item = FrozenItem.new(frozen_item_params)
+    #@frozen_item = FrozenItem.new(frozen_item_params)
+    @frozen_item = current_user.frozen_items.build(frozen_item_params)
+
 
     respond_to do |format|
       if @frozen_item.save
@@ -56,6 +61,12 @@ class FrozenItemsController < ApplicationController
       format.html { redirect_to frozen_items_url, notice: "Frozen item was successfully destroyed." }
       format.json { head :no_content }
     end
+  end
+
+
+  def correct_user
+    @frozen_item = current_user.frozen_items.find_by(id: params[:id])
+    redirect_to frozen_items_path, notice: "Not authorized to edit this frozen item" if @frozen_item.nil?
   end
 
   private
