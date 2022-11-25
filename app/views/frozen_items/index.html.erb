@@ -1,4 +1,4 @@
-
+<% if user_signed_in? %>
 
 <h1>Frozen items</h1>
 
@@ -24,3 +24,11 @@
 </div>
 
 <%= link_to "New frozen item", new_frozen_item_path, class:'btn btn-secondary' %>
+<% else %>
+<h1>Freezer Organizer App</h1>
+<p>
+  Our app is amazing. Just think of all of the things you'll remember not to
+  leave until they're freezer burned!
+</p>
+
+<% end %>
